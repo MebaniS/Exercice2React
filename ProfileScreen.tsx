@@ -13,7 +13,7 @@ const HomeScreen = () => {
 
   return (
     <View>
-      <Button title="Aller au profil" />
+      <textarea>Page profil</textarea>
     </View>
   );
 };
