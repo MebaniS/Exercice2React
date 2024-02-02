@@ -11,8 +11,9 @@ const HomeScreen = () => {
   const navigation = useNavigation();
 
   const goToProfile = () => {
-    // Naviguer vers le ProfileScreen avec le paramètre { name: 'Votre Nom' }
+
     navigation.navigate('ProfileScreen')
+    
   };
 
   return (

@@ -12,7 +12,7 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeScreen} />
-        
+        <Tab.Screen name="Profil" component={ProfileScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

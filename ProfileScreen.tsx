@@ -1,37 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { RouteProp } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
+import { View, Button, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 type RootStackParamList = {
-  Home: undefined;
-  Profile: { name: string };
+    HomeScreen: undefined;
+    ProfileScreen: undefined;
 };
 
-type ProfileScreenRouteProp = RouteProp<RootStackParamList, 'Profile'>;
-type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Profile'>;
 
-interface Props {
-  route: ProfileScreenRouteProp;
-  navigation: ProfileScreenNavigationProp;
-}
-
-const ProfileScreen: React.FC<Props> = ({ route }) => {
-  const { name } = route.params;
+const HomeScreen = () => {
+  const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
-      <Text>Nom: {name}</Text>
+    <View>
+      <Button title="Aller au profil" />
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
-
-export default ProfileScreen;
+export default HomeScreen;
